@@ -1,0 +1,118 @@
+@use '../variables' as *;
+
+.samorzad {
+  margin-top: 100px;
+  @include setFlex(column);
+  gap: 5px;
+  text-align: center;
+
+  &__title {
+    font-size: 40px;
+    padding-inline: 20px;
+
+    span {
+      font-size: 2.2rem;
+      color: $yellow;
+    }
+  }
+  &__div {
+    margin-top: 5px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 75px;
+    width: min(1320px, 100%);
+    padding-inline: 20px;
+
+    &__zdjecie {
+      width: min(700px, 100%);
+      padding-inline: 20px;
+      height: 425px;
+      background-image: url(/samorzad.JPG);
+      background-position: center;
+      background-size: cover;
+      font-weight: 800;
+      font-size: 1.25rem;
+    }
+    &__text {
+      @include setFlex(column);
+      position: relative;
+      bottom: 7px;
+      text-align: left;
+
+      span {
+        position: relative;
+        bottom: 15px;
+        color: $yellow;
+        font-weight: 700;
+        font-size: 1.4rem;
+        user-select: none;
+      }
+      br {
+        user-select: none;
+      }
+    }
+  }
+  &__harmo {
+    margin-bottom: 40px;
+    width: min(1320px, 100%);
+    padding-inline: 20px;
+
+    &__title {
+      @include setFlex(row, space-between);
+      text-align: left;
+    }
+  }
+}
+@media screen and (max-width: 1066px) {
+  .samorzad__div {
+    @include setFlex(column);
+    margin-bottom: 0px;
+    gap: 30px;
+  }
+  .samorzad__div__text {
+    width: min(700px, 100%);
+    @include setFlex(row, space-between, flex-start);
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 670px) {
+  .samorzad__div__text {
+    @include setFlex(column);
+    gap: 0px;
+  }
+}
+@media screen and (max-width: 521px) {
+  .samorzad__harmo__title {
+    @include setFlex(row);
+  }
+  .samorzad__harmo__title img {
+    display: none;
+  }
+  .samorzad__harmo__title__h1 {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 473px) {
+  .samorzad__div__zdjecie {
+    height: 350px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .samorzad__div__zdjecie {
+    height: 300px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .samorzad__div__zdjecie {
+    height: 200px;
+  }
+  .samorzad__title {
+    padding-inline: 0;
+  }
+}
+@media screen and (max-width: 283px) {
+  .samorzad__div__text {
+    text-align: center;
+  }
+}

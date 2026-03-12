@@ -1,0 +1,20 @@
+@use '@/app/variables' as *;
+
+//* Information
+.information {
+  position: fixed;
+  left: 0px;
+  bottom: 20%;
+  z-index: 5;
+  color: #fff;
+  @include setFlex(column);
+  gap: 20px;
+
+  &__icon {
+    cursor: pointer;
+  }
+
+  @media all and (width <= 510px) {
+    display: none;
+  }
+}

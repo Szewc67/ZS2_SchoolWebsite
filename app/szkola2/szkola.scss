@@ -1,0 +1,79 @@
+@use '../variables' as *;
+
+.szkola {
+  margin: auto;
+  margin-top: 120px;
+  max-width: $maxWidth;
+
+  span {
+    color: $yellow;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  &__image {
+    width: 450px;
+    height: 420px;
+    object-fit: cover;
+  }
+  &__hero {
+    width: 100%;
+    @include setFlex(row, space-between);
+    flex-wrap: wrap;
+
+    &--reverse {
+      flex-direction: row-reverse;
+    }
+  }
+  &__article {
+    max-width: 700px;
+
+    p {
+      font-weight: 500;
+      font-size: 1.2rem;
+    }
+  }
+  &__menu {
+    margin-block: 100px;
+    width: 100%;
+    @include setFlex(row);
+    flex-wrap: wrap;
+    gap: 30px;
+
+    &-button {
+      padding: 10px;
+      width: 250px;
+      height: 100px;
+      background-color: #000;
+      color: #fff;
+      font-size: 1.6rem;
+      border-radius: 5px;
+      @include setFlex(row);
+      text-align: center;
+      transition: 0.4s;
+
+      &:hover {
+        scale: 1.04;
+      }
+    }
+  }
+  &__documents {
+    margin-block: 80px;
+    width: 100%;
+
+    &-title {
+      margin-bottom: 60px;
+      text-align: center;
+    }
+    &-container {
+      @include setFlex(row);
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+    &-element {
+      @include setFlex(row);
+    }
+  }
+}

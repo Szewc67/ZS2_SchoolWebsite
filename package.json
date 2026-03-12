@@ -1,0 +1,20 @@
+{
+  "name": "zs2website",
+  "version": "4.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^1.4.1",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.2.23",
+    "next": "14.2.35",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sass": "^1.83.4"
+  }
+}
